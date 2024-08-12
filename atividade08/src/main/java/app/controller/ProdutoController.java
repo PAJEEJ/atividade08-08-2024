@@ -3,11 +3,8 @@ package app.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import app.entity.Cliente;
 import app.entity.Produto;
 import app.service.ProdutoService;
-
 import java.util.List;
 
 @RestController
@@ -35,13 +32,8 @@ public class ProdutoController {
     }
 
     @GetMapping("/findall")
-    public ResponseEntity<List<Produto>> listarClientes() {
-        return ResponseEntity.ok(produtoService.findAll());
-    }
-
-    @GetMapping
     public ResponseEntity<List<Produto>> listarProdutos() {
-        return ResponseEntity.ok(produtoService.listarTodos());
+        return ResponseEntity.ok(produtoService.findAll());
     }
 
     @GetMapping("/top10")

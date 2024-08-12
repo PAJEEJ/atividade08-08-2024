@@ -13,22 +13,14 @@ import lombok.Setter;
 @Setter
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor  
-
-
+@NoArgsConstructor
 public class Produto {
-	
-	
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	
-	private String nome;
-	private String descriçao;
-	private Double preco;
-	
-	
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private String descricao;
+    private Double preco;
 }

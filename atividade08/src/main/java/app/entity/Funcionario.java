@@ -1,4 +1,5 @@
 package app.entity;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,21 +14,16 @@ import lombok.Setter;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-
-
 public class Funcionario {
-	
-	@Id 
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private Long id;
 
-	
-	public String nome;
-	public String email;
-	public String telefone;
-	public String idade;
-	public String endereco;
-	public String funcao;
-
-
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    private Long id;
+    
+    private String nome;
+    private String email;
+    private String telefone;
+    private int idade;
+    private String endereco;
+    private String funcao;
 }

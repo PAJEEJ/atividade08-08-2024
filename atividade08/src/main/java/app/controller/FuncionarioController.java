@@ -3,11 +3,8 @@ package app.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import app.entity.Cliente;
 import app.entity.Funcionario;
 import app.service.FuncionarioService;
-
 import java.util.List;
 
 @RestController
@@ -43,5 +40,4 @@ public class FuncionarioController {
     public ResponseEntity<List<Funcionario>> listarFuncionario() {
         return ResponseEntity.ok(funcionarioService.findAll());
     }
-
 }
